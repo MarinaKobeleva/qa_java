@@ -1,11 +1,8 @@
-import com.example.Animal;
 import com.example.Feline;
-import com.example.LionAlex;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.List;
@@ -17,8 +14,6 @@ import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class FelineTest {
-    @Spy
-    private Animal animal;
     private Feline feline;
 
     @Before

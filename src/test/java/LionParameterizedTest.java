@@ -1,19 +1,17 @@
+import com.example.Feline;
 import com.example.Lion;
-import com.example.Predator;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Spy;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThrows;
 
 @RunWith(Parameterized.class)
 public class LionParameterizedTest {
 
     @Spy
-    private Predator predator;
+    private Feline feline;
     private final String sex;
     private final boolean expectedHasMane;
 
@@ -33,7 +31,7 @@ public class LionParameterizedTest {
 
     @Test
     public void lionGenderTest() throws Exception {
-        Lion lion = new Lion(sex, predator);
+        Lion lion = new Lion(sex, feline);
         assertEquals(expectedHasMane, lion.doesHaveMane());
     }
 
